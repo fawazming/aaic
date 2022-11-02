@@ -38,24 +38,13 @@ initial-scale=1, shrink-to-fit=no" />
                         </a>
                     </div>
                     <div class="title-heading text-center my-auto pt-4">
-                        <a href="report" class="bg-green-600 rounded-3xl px-4 text-white hover:bg-gray-200 mt-6 mb-6 md:text-4xl text-2xl font-medium">Check Student Report</a>
-                        <h1 class="text-white mt-3 mb-6 md:text-5xl text-3xl font-bold">We Are Coming Soon...</h1>
-                        <p class="text-white/70 text-lg max-w-xl mx-auto">We are putting things in place for
-                            you. Coming back here, once live will be very interesting...</p>
-                        <div id="countdown">
-                            <ul class="count-down
-                            list-none inline-block text-white text-center
-                            mt-8 m-6 countDown">
-                                <li id="days" class="days count-number
-                            inline-block m-2"></li>
-                                <li id="hours" class="hours count-number inline-block m-2"></li>
-                                <li id="minutes" class="minutes count-number inline-block
-                            m-2"></li>
-                                <li id="seconds" class="seconds count-number
-                            inline-block m-2"></li>
-                                <li id="end" class="h1"></li>
-                            </ul>
-                        </div>
+                        <h1 class="text-white mt-3 mb-6 md:text-5xl text-3xl font-bold">Progress Checker</h1>
+                        <form action="https://portal.aaic.sgm.ng/ireportsheet" method="get" style="">
+                            <input type="text" name="adm" class="p-4 rounded mb-4" style="width:75vw;" placeholder="Admission Number"> <br>
+                            <input type="password" name="phone" class="p-4 rounded" style="width:75vw;" placeholder="Phone Number"> <br>
+                            <input type="submit" class="bg-green-600 rounded-3xl py-2 px-4 text-white hover:bg-gray-200 mt-6 mb-6 md:text-4xl text-2xl font-medium" value="Check Report">
+                        </form>
+
                     </div>
                     <div class="text-center">
                         <p class="mb-0
@@ -71,12 +60,6 @@ initial-scale=1, shrink-to-fit=no" />
                             container-->
     </section>
     <!--end section-->
-    <!-- JAVASCRIPTS -->
-    <script src="./assets/countdown.js"></script>
-    <script type="text/javascript">
-    let countDownDate = new Date("Nov 25, 2022 23:59:00");
-    initializeClock('countDown', countDownDate);
-    </script>
 </body>
 
 </html>
