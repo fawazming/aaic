@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to WhatsApp Group</title>
+    <meta http-equiv="refresh" content="3; url=https://chat.whatsapp.com/example">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .whatsapp-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #25D366;
+            border-radius: 50%;
+            color: white;
+            font-size: 40px;
+        }
+        
+        h1 {
+            color: #075E54;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        
+        p {
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .countdown {
+            font-size: 42px;
+            font-weight: bold;
+            color: #25D366;
+            margin: 20px 0;
+        }
+        
+        .manual-link {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .manual-link:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="whatsapp-icon">✓</div>
+        <h1>Redirecting to WhatsApp Group</h1>
+        <p>You are being redirected to our WhatsApp group chat. Please wait a moment...</p>
+        
+        <div class="countdown" id="countdown">3</div>
+        
+        <p>If you are not redirected automatically, click the button below:</p>
+        <a href="https://chat.whatsapp.com/example" class="manual-link">Join WhatsApp Group</a>
+        
+        <div class="footer">
+            <p>You'll need WhatsApp installed on your device to join the group.</p>
+        </div>
+    </div>
+
+    <script>
+        // Countdown timer
+        let seconds = 3;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdownInterval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
